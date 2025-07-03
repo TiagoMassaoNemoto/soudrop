@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+@foreach($new_product as $new_products)
+    <p>{{$new_products->title}} -- {{$new_products->author}} -- {{$new_products->description}}</p>
+@endforeach
 <head>
   <meta charset="UTF-8">
   <title>Lista de Produtos</title>
