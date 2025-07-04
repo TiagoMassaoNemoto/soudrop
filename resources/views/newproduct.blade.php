@@ -50,15 +50,19 @@
   <h1>Cadastrar Novo Produto</h1>
 
   <div class="form-container">
-    <form action="#" method="post">
-      <label for="titulo">Título do Produto:</label>
-      <input type="text" id="titulo" name="titulo" required>
+    <form action="/newproduct" method="POST">
+      @csrf
+      <label for="title">Título do Produto:</label>
+      <input type="text" id="title" name="title" required>
 
-      <label for="descricao">Descrição:</label>
-      <textarea id="descricao" name="descricao" rows="4" required></textarea>
+      <label for="description">Descrição:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
 
-      <label for="valor">Valor (R$):</label>
-      <input type="number" id="valor" name="valor" step="0.01" required>
+      <label for="value">Valor (R$):</label>
+      <input type="number" id="value" name="value" step="0.01" required>
+
+      <label for="author">Dono:</label>
+      <input type="text" id="author" name="author" step="0.01" required>
 
       <input type="submit" value="Cadastrar Produto">
     </form>

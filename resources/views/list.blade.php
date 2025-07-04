@@ -1,6 +1,8 @@
-@foreach($new_product as $new_products)
-    <p>{{$new_products->title}} -- {{$new_products->author}} -- {{$new_products->description}}</p>
-@endforeach
+
+<p> --  -- </p>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Lista de Produtos</title>
@@ -53,8 +55,8 @@
   <h1>Lista de Produtos</h1>
 
   <div class="botao-container">
-    <button onclick="alert('Exibindo produtos...')">Ver Produtos</button>
-    <button onclick="alert('Criando novo produto...')">Criar Novo Produto</button>
+    <a href="/myproduct" class="btn btn-primary">Meus Produtos</a>
+    <a href="/newproduct" class="btn btn-primary">Criar Novo Produto</a>
   </div>
 
   <table>
@@ -66,25 +68,15 @@
         <th>Autor</th>
       </tr>
     </thead>
+    @foreach($new_products as $new_product)
     <tbody>
       <tr>
-        <td>Produto A</td>
-        <td>Produto de alta qualidade para uso doméstico.</td>
-        <td>01/07/2025</td>
-        <td>João Silva</td>
-      </tr>
-      <tr>
-        <td>Produto B</td>
-        <td>Ferramenta versátil para pequenas reformas.</td>
-        <td>28/06/2025</td>
-        <td>Maria Costa</td>
-      </tr>
-      <tr>
-        <td>Produto C</td>
-        <td>Dispositivo inteligente com integração IoT.</td>
-        <td>15/06/2025</td>
-        <td>Paulo Higa</td>
+        <td>{{$new_product->title}}</td>
+        <td>{{$new_product->description}}</td>
+        <td>{{$new_product->created_at}}</td>
+        <td>{{$new_product->author}}</td>
       </tr>
     </tbody>
+    @endforeach
   </table>
 </body>

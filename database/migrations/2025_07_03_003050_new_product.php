@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 90);
             $table->text('description');
+            $table->decimal('value');
             $table->string('author', 50);
             $table->timestamps();
         });
