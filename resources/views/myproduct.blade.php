@@ -50,7 +50,8 @@
   <h1>Meus Produtos</h1>
 
   <div class="botao-container">
-    <button onclick="alert('Criar novo produto...')">Criar Novo Produto</button>
+    <a href='/list'>Produtos</a>
+    <a href='/newproduct'>Criar Novo Produto</a>
   </div>
 
   <table>
@@ -62,25 +63,15 @@
         <th>Autor</th>
       </tr>
     </thead>
+    @foreach($new_products as $new_product)
     <tbody>
       <tr>
-        <td>Produto X</td>
-        <td>Artigo exclusivo desenvolvido para clientes especiais.</td>
-        <td>02/07/2025</td>
-        <td>Massanemo</td>
-      </tr>
-      <tr>
-        <td>Produto Y</td>
-        <td>Ferramenta inovadora com funcionalidades avançadas.</td>
-        <td>25/06/2025</td>
-        <td>Massanemo</td>
-      </tr>
-      <tr>
-        <td>Produto Z</td>
-        <td>Design elegante com tecnologia de ponta.</td>
-        <td>15/06/2025</td>
-        <td>Massanemo</td>
+        <td>{{$new_product->title}}</td>
+        <td>{{$new_product->description}}</td>
+        <td>{{$new_product->created_at}}</td>
+        <td>{{$new_product->user->name}}</td>
       </tr>
     </tbody>
+    @endforeach
   </table>
 </body>

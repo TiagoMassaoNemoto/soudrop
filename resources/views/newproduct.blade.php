@@ -61,9 +61,6 @@
       <label for="value">Valor (R$):</label>
       <input type="number" id="value" name="value" step="0.01" required>
 
-      <label for="author">Dono:</label>
-      <input type="text" id="author" name="author" step="0.01" required>
-
       <input type="submit" value="Cadastrar Produto">
     </form>
   </div>

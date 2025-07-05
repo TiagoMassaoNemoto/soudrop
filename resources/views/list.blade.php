@@ -1,6 +1,3 @@
-
-<p> --  -- </p>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -74,7 +71,7 @@
         <td>{{$new_product->title}}</td>
         <td>{{$new_product->description}}</td>
         <td>{{$new_product->created_at}}</td>
-        <td>{{$new_product->author}}</td>
+        <td>{{$new_product->user->name}}</td>
       </tr>
     </tbody>
     @endforeach

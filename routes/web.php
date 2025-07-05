@@ -10,15 +10,15 @@ Route::get('/', function () {
 
 Route::get('/list', [NewProduct::class, 'index']);
 
-Route::get('/myproduct', function () {
-    return view('myproduct');
-});
+Route::get('/myproduct', [NewProduct::class, 'yourProduct'
+])->middleware('auth');
 
 Route::get('/newproduct', function () {
     return view('newproduct');
-});
+})->middleware('auth');
 
-Route::post('/newproduct', [NewProduct::class, 'store']);
+Route::post('/newproduct', [NewProduct::class, 'store']
+)->middleware('auth');
 
 Route::middleware([
     'auth:sanctum',
