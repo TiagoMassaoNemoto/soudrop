@@ -70,6 +70,13 @@
         <td>{{$new_product->description}}</td>
         <td>{{$new_product->created_at}}</td>
         <td>{{$new_product->user->name}}</td>
+        <td>
+          <form action="{{ route('myproduct.destroy', $new_product->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Excluir</button>
+          </form>
+        </td>
       </tr>
     </tbody>
     @endforeach

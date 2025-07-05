@@ -13,6 +13,12 @@ Route::get('/list', [NewProduct::class, 'index']);
 Route::get('/myproduct', [NewProduct::class, 'yourProduct'
 ])->middleware('auth');
 
+Route::delete('/myproduct/{id}', [NewProduct::class, 'destroy'
+])->name('myproduct.destroy')->middleware('auth');
+
+Route::get('/myproduct/{id}', [NewProduct::class, 'edit'
+])->middleware('auth');
+
 Route::get('/newproduct', function () {
     return view('newproduct');
 })->middleware('auth');

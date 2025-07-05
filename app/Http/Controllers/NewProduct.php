@@ -39,8 +39,14 @@ class NewProduct extends Controller
 
         return redirect('/');
 
-        
-
     }
     
+    public function destroy($id) {
+
+        New_Product::findOrFail($id)->delete();
+
+        return redirect('/myproduct');
+
+    }
+
 }
