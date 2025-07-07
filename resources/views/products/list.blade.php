@@ -65,13 +65,13 @@
         <th>Autor</th>
       </tr>
     </thead>
-    @foreach($new_products as $new_product)
+    @foreach($products as $product)
     <tbody>
       <tr>
-        <td>{{$new_product->title}}</td>
-        <td>{{$new_product->description}}</td>
-        <td>{{$new_product->created_at}}</td>
-        <td>{{$new_product->user->name}}</td>
+        <td>{{$product->title}}</td>
+        <td>{{$product->description}}</td>
+        <td>{{$product->created_at}}</td>
+        <td>{{$product->user->name}}</td>
       </tr>
     </tbody>
     @endforeach

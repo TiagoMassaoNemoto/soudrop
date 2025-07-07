@@ -2,28 +2,29 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\NewProduct;
+use App\Http\Controllers\ProductController;
+use App\Models\Product;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/list', [NewProduct::class, 'index']);
+Route::get('/list', [ProductController::class, 'index']);
 
-Route::get('/myproduct', [NewProduct::class, 'yourProduct'
+Route::get('/myproduct', [ProductController::class, 'yourProduct'
 ])->middleware('auth');
 
-Route::delete('/myproduct/{id}', [NewProduct::class, 'destroy'
+Route::delete('/myproduct/{id}', [ProductController::class, 'destroy'
 ])->name('myproduct.destroy')->middleware('auth');
 
-Route::get('/myproduct/{id}', [NewProduct::class, 'edit'
+Route::get('/myproduct/{id}', [ProductController::class, 'edit'
 ])->middleware('auth');
 
 Route::get('/newproduct', function () {
-    return view('newproduct');
+    return view('products.newproduct');
 })->middleware('auth');
 
-Route::post('/newproduct', [NewProduct::class, 'store']
+Route::post('/newproduct', [ProductController::class, 'store']
 )->middleware('auth');
 
 Route::middleware([
