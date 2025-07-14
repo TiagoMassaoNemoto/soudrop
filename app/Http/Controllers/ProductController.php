@@ -10,8 +10,24 @@ use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
     public function index() {
-        $products = Product::all(); 
-        return view('products.list', compact('products'));
+
+        $search = request('search');
+
+        if($search) {
+
+            $products = Product::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+
+        }
+
+        else {
+
+            $products = Product::all();
+
+        }
+
+        return view('products.list', ['products' => $products, 'search' => $search] );//compact('products'));
     }
 
     public function yourProduct() {

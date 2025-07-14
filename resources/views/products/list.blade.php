@@ -49,13 +49,22 @@
   </style>
 </head>
 <body>
+  <h1></h1>
   <h1>Lista de Produtos</h1>
 
   <div class="botao-container">
+    @auth
     <a href="/myproduct" class="btn btn-primary">Meus Produtos</a>
     <a href="/newproduct" class="btn btn-primary">Criar Novo Produto</a>
+    @endauth
+    <form action="/list" method="GET">
+      <input type="text" id="search" name="search" placeholder="Pesquisar">
+    </form>
+  @if(count($products) == 0 && $search)
+      <p>Não foi possível encontrar nenhum evento com {{ $search }}! <a href="/list">Ver todos os produtos</a></p>
+    
   </div>
-
+  @else
   <table>
     <thead>
       <tr>
@@ -76,4 +85,5 @@
     </tbody>
     @endforeach
   </table>
+  @endif
 </body>

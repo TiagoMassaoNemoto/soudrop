@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/teste', function () {
+    return view('products.teste');
+});
+
 Route::get('/list', [ProductController::class, 'index']);
 
 Route::get('/myproduct', [ProductController::class, 'yourProduct'
