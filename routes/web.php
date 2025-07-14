@@ -17,7 +17,10 @@ Route::get('/myproduct', [ProductController::class, 'yourProduct'
 Route::delete('/myproduct/{id}', [ProductController::class, 'destroy'
 ])->name('myproduct.destroy')->middleware('auth');
 
-Route::get('/myproduct/{id}', [ProductController::class, 'edit'
+Route::get('/products/edit/{id}', [ProductController::class, 'edit'
+])->middleware('auth');
+
+Route::put('/products/update/{id}', [ProductController::class, 'update'
 ])->middleware('auth');
 
 Route::get('/newproduct', function () {

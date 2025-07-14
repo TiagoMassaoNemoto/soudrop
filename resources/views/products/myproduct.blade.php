@@ -71,10 +71,12 @@
         <td>{{$product->created_at}}</td>
         <td>{{$product->user->name}}</td>
         <td>
+          <a href="/products/edit/{{ $product->id }}">Editar</a>
           <form action="{{ route('myproduct.destroy', $product->id) }}" method="POST">
             @csrf
             @method('DELETE')
             <button type="submit">Excluir</button>
+            
           </form>
         </td>
       </tr>

@@ -52,7 +52,16 @@ class ProductController extends Controller
 
         $products = Product::findOrFail($id);
 
-        return view('/product/productedit', ['product' => $edit]);
+        return view('products.edit', ['product' => $products]);
+
+    }
+
+    public function update(Request $request) {
+
+        Product::findOrFail($request->id)->update($request->all());
+
+        return redirect('/myproduct');
+
     }
 
 }
