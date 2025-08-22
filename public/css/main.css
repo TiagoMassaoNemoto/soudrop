@@ -1,7 +1,8 @@
-body {
+ body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f7f7f7;
+      color: #333;
     }
 
     .navbar {
@@ -51,6 +52,20 @@ body {
       gap: 15px;
     }
 
+    .perfil-btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .perfil-btn:hover {
+      background-color: #005fa3;
+    }
+
     .register-btn {
       background-color: #28a745;
       color: white;
@@ -79,6 +94,38 @@ body {
       background-color: #005fa3;
     }
 
+    .edit-btn {
+      background-color: #28a745;
+      color: white;
+      box-shadow: none;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .edit-btn:hover {
+      background-color: #218838;
+    }
+
+    .delete-btn {
+      background-color: #a72828;
+      color: white;
+      box-shadow: none;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+      background-color: #882121;
+    }
+
     @media (max-width: 600px) {
       .navbar {
         flex-direction: column;
@@ -103,4 +150,58 @@ body {
         width: 100%;
         text-align: center;
       }
+    }
+    /* Area de texto search*/
+    .search-txf {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-txf button {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .botao-container button:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+
+    /* Estilo da tabela */
+    table {
+      width: 90%;
+      margin: 0 auto 40px auto;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Cabeçalho da tabela */
+    th {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    /* Células da tabela */
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Linhas da tabela */
+    tr:hover {
+      background-color: #f0f8ff;
+    }
+    h1{
+      margin-left: 100px;
     }

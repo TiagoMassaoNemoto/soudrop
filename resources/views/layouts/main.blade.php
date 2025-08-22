@@ -13,15 +13,23 @@
     <ul>
       <li><a href="/">Início</a></li>
       <li><a href="/list">Produtos</a></li>
+      @auth
       <li><a href="/newproduct">Criar</a></li>
       <li><a href="/myproduct">Meu</a></li>
+      @endauth
     </ul>
 
     <div class="actions">
-      <a href="/register" class="register-btn">📝 Registrar</a>
+      @auth
+      <a href="/perfil" class="perfil-btn">Perfil</a>
+      @endauth
+      @guest
+      <a href="/register" class="register-btn">Registrar</a>
       <a href="/login" class="login-btn">Entrar</a>
+      @endguest
     </div>
   </nav>
+  @yield('body')
 
 </body>
 </html>
