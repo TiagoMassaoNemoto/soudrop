@@ -1,207 +1,311 @@
- body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
 
-    .navbar {
-      background-color: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-    .logo {
-      font-size: 1.8em;
-      font-weight: bold;
-      color: #0077cc;
-    }
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0077cc;
+}
 
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-    .navbar ul li {
-      margin-left: 25px;
-    }
+.navbar ul li {
+  margin-left: 25px;
+}
 
-    .navbar ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s ease, border-bottom 0.3s ease;
-      padding-bottom: 4px;
-    }
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+}
 
-    .navbar ul li a:hover {
-      color: #0077cc;
-      border-bottom: 2px solid #0077cc;
-    }
+.navbar ul li a:hover {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+}
 
-    .actions {
-      display: flex;
-      gap: 15px;
-    }
+.actions {
+  display: flex;
+  gap: 15px;
+}
 
-    .perfil-btn {
-      background-color: #0077cc;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.perfil-btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .perfil-btn:hover {
-      background-color: #005fa3;
-    }
+.perfil-btn:hover {
+  background-color: #005fa3;
+}
 
-    .register-btn {
-      background-color: #28a745;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.register-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .register-btn:hover {
-      background-color: #218838;
-    }
+.register-btn:hover {
+  background-color: #218838;
+}
 
-    .login-btn {
-      background-color: #0077cc;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.login-btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .login-btn:hover {
-      background-color: #005fa3;
-    }
+.login-btn:hover {
+  background-color: #005fa3;
+}
 
-    .edit-btn {
-      background-color: #28a745;
-      color: white;
-      box-shadow: none;
-      border: none;
-      padding: 8px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+  box-shadow: none;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .edit-btn:hover {
-      background-color: #218838;
-    }
+.edit-btn:hover {
+  background-color: #218838;
+}
 
-    .delete-btn {
-      background-color: #a72828;
-      color: white;
-      box-shadow: none;
-      border: none;
-      padding: 8px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.delete-btn {
+  background-color: #a72828;
+  color: white;
+  box-shadow: none;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .delete-btn:hover {
-      background-color: #882121;
-    }
+.delete-btn:hover {
+  background-color: #882121;
+}
 
-    @media (max-width: 600px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-      .navbar ul {
-        flex-direction: column;
-        width: 100%;
-      }
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
 
-      .navbar ul li {
-        margin: 10px 0;
-      }
+  .navbar ul li {
+    margin: 10px 0;
+  }
 
-      .actions {
-        flex-direction: column;
-        width: 100%;
-      }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
 
-      .actions a {
-        width: 100%;
-        text-align: center;
-      }
-    }
-    /* Area de texto search*/
-    .search-txf {
-      text-align: center;
-      margin: 20px;
-    }
+  .actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
 
-    .search-txf button {
-      background-color: #0077cc;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
 
-    .botao-container button:hover {
-      background-color: #005fa3;
-      transform: scale(1.05);
-    }
+/*---------------------------------------- List ----------------------------------------*/
+/* Area de texto search*/
 
-    /* Estilo da tabela */
-    table {
-      width: 90%;
-      margin: 0 auto 40px auto;
-      border-collapse: collapse;
-      background-color: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+.search-txf {
+  text-align: center;
+  margin: 20px;
+}
 
-    /* Cabeçalho da tabela */
-    th {
-      background-color: #0077cc;
-      color: white;
-      padding: 12px;
-      text-align: left;
-      font-weight: 600;
-    }
+.search-txf button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-    /* Células da tabela */
-    td {
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-    }
+.botao-container button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
 
-    /* Linhas da tabela */
-    tr:hover {
-      background-color: #f0f8ff;
-    }
-    h1{
-      margin-left: 100px;
-    }
+/* Estilo da tabela */
+table {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Cabeçalho da tabela */
+th {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Células da tabela */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Linhas da tabela */
+tr:hover {
+  background-color: #f0f8ff;
+}
+h1{
+  margin: 20px;
+}
+
+/*----------------------------------------Newproduct ----------------------------------------*/
+/* Formulario */
+.h1-center {
+  text-align: center;
+  margin-left: 0;
+}
+.form-newproduct {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Area de Entrada Text e Number*/
+input[type="title"], textarea, input[type="number"] {
+  resize: none;
+  width: 99%;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botão Cadastrar Produto */
+input[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+input[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/*---------------------------------------- Filtro ----------------------------------------*/
+
+/*Div da table e do filtro*/
+#filtro-table-container {
+display: flex;
+gap: 20px;
+align-items: flex-start;
+margin: 20px;
+}
+/*Div do filtro*/
+#filtro-container {
+  display: grid;
+  flex-direction: column;
+  gap: 10px;
+  font-family: sans-serif;
+  align-items: flex-start;
+  margin-top: 1px;
+}
+
+#filtro-container label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+#filtro-container input[type="checkbox"] {
+  display: none;
+}
+
+/*Simbolo de verificado*/
+.checkbox {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #555;
+  margin-right: 4px;
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+}
+
+/*Espaçamento do simbolo*/
+input[type="checkbox"]:checked + .checkbox::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 1px;
+  height: 5px;
+  border: solid #007bff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

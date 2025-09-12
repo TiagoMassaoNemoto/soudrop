@@ -59,6 +59,14 @@
       <label for="description">Descrição:</label>
       <textarea id="description" name="description" rows="4" required>{{$product->description}}</textarea>
 
+       <label for="filter">Escolha uma categoria:</label>
+        <select name="filter" id="filter">
+          <option value="Fruta" {{$product->filter}}>Fruta</option>
+          <option value="Legumes" {{$product->filter}}>Legumes</option>
+          <option value="Doce" {{$product->filter}}>Doce</option>
+          <option value="Salgado" {{$product->filter}}>Salgado</option>
+        </select>
+
       <label for="value">Valor (R$):</label>
       <input type="number" id="value" name="value" step="0.01" value="{{$product->value}}" required>
 

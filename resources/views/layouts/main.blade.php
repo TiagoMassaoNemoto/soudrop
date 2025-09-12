@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>@yield('title')</title>
   <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
   @yield('content')

@@ -13,6 +13,7 @@
         <th>Descrição</th>
         <th>Data de Criação</th>
         <th>Autor</th>
+        <th>Tipo</th>
         <th>Ação</th>
       </tr>
     </thead>
@@ -23,6 +24,7 @@
         <td>{{$product->description}}</td>
         <td>{{$product->created_at}}</td>
         <td>{{$product->user->name}}</td>
+        <td>{{$product->filter}}</td>
         <td>
           <button class="edit-btn" onclick="window.location.href='/products/edit/{{ $product->id }}'">Editar</button>
           <form action="{{ route('myproduct.destroy', $product->id) }}" method="POST">

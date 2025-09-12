@@ -1,62 +1,28 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Cadastrar Produto</title>
-  <style>
-    body {
-      font-family: Verdana, sans-serif;
-      background-color: #f9f9ff;
-      padding: 30px;
-    }
-    h1 {
-      text-align: center;
-      color: #4a4a8f;
-    }
-    .form-container {
-      max-width: 500px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      color: #333;
-    }
-    input[type="text"], textarea, input[type="number"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    input[type="submit"] {
-      background-color: #4a4a8f;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 16px;
-    }
-    input[type="submit"]:hover {
-      background-color: #363674;
-    }
-  </style>
-</head>
-<body>
-  <h1>Cadastrar Novo Produto</h1>
+@extends('layouts.main')
 
-  <div class="form-container">
+@section('title', 'Lista de Produtos')
+
+@section('content')
+
+@section('body')
+  <h1 class="h1-center">Cadastrar Novo Produto</h1>
+
+  <div class="form-newproduct">
     <form action="/newproduct" method="POST">
       @csrf
       <label for="title">Título do Produto:</label>
-      <input type="text" id="title" name="title" required>
+      <input type="title" id="title" name="title" required>
 
       <label for="description">Descrição:</label>
-      <textarea id="description" name="description" rows="4" required></textarea>
+      <textarea id="description" name="description" rows="4" cols="50" maxlength="1000" required></textarea>
+
+      <label for="filter">Escolha uma categoria:</label>
+        <select name="filter" id="filter">
+          <option value="Fruta">Fruta</option>
+          <option value="Legumes">Legumes</option>
+          <option value="Doce">Doce</option>
+          <option value="Salgado">Salgado</option>
+        </select>
 
       <label for="value">Valor (R$):</label>
       <input type="number" id="value" name="value" step="0.01" required>
@@ -64,4 +30,4 @@
       <input type="submit" value="Cadastrar Produto">
     </form>
   </div>
-</body>
+@endsection

@@ -11,6 +11,7 @@ class ProductController extends Controller
 {
     public function index() {
 
+        $filter = request('filter');
         $search = request('search');
 
         if($search) {
@@ -19,6 +20,14 @@ class ProductController extends Controller
                 ['title', 'like', '%'.$search.'%']
             ])->get();
 
+        }
+
+        elseif($filter) {
+
+            $products = Product::where([
+                ['filter', 'like', '%'.$filter.'%']
+            ])->get();
+            
         }
 
         else {
@@ -46,6 +55,7 @@ class ProductController extends Controller
         $products->title = $request->title;
         $products->value = $request->value;
         $products->description = $request->description;
+        $products->filter = $request->filter;
 
         $user = Auth::user();
         $products->user_id = $user->id;
