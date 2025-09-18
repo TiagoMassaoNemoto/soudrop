@@ -13,7 +13,7 @@
     <li>🔍 Filtro de produtos por nome ou categoria</li>
     <li>✏️ Edição de produtos existentes</li>
     <li>🗑️ Exclusão de produtos</li>
-    <li>🗄️ Conexão com banco de dados (MySQL, PostgreSQL ou outro)</li>
+    <li>🗄️ Conexão com banco de dados (MySQL)</li>
   </ul>
 
   <h2>🛠️ Tecnologias Utilizadas</h2>
