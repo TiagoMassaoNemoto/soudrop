@@ -1,3 +1,41 @@
+<head>
+  <meta charset="UTF-8">
+  <title>README - Projeto Laravel</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; background-color: #f9f9f9; color: #333; }
+    h1, h2 { color: #2c3e50; }
+    ul { margin-left: 20px; }
+    code { background-color: #eee; padding: 2px 6px; border-radius: 4px; }
+    a { color: #3498db; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <h1>📦 Projeto Laravel - Gerenciador de Produtos</h1>
+
+  <p>Este é um projeto desenvolvido com o framework <strong>Laravel</strong>, que consiste em um site com funcionalidades completas de gerenciamento de produtos.</p>
+
+  <h2>🚀 Funcionalidades</h2>
+  <ul>
+    <li>🏠 Página inicial (Home)</li>
+    <li>🔐 Área de login e autenticação</li>
+    <li>📋 Listagem de produtos</li>
+    <li>➕ Criação de novos produtos</li>
+    <li>🔍 Filtro de produtos por nome ou categoria</li>
+    <li>✏️ Edição de produtos existentes</li>
+    <li>🗑️ Exclusão de produtos</li>
+    <li>🗄️ Conexão com banco de dados (MySQL, PostgreSQL ou outro)</li>
+  </ul>
+
+  <h2>🛠️ Tecnologias Utilizadas</h2>
+  <ul>
+    <li>Laravel 10+</li>
+    <li>Blade Templates</li>
+    <li>MySQL</li>
+    <li>Autenticação via Jetstream</li>
+  </ul>
+  
+</body>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
