@@ -1,14 +1,3 @@
-<head>
-  <meta charset="UTF-8">
-  <title>README - Projeto Laravel</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; background-color: #f9f9f9; color: #333; }
-    h1, h2 { color: #2c3e50; }
-    ul { margin-left: 20px; }
-    code { background-color: #eee; padding: 2px 6px; border-radius: 4px; }
-    a { color: #3498db; text-decoration: none; }
-  </style>
-</head>
 <body>
 
   <h1>📦 Projeto Laravel - Gerenciador de Produtos</h1>
